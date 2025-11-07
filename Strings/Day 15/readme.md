@@ -1,33 +1,62 @@
-### Add Binary Strings
+# 🧩 Day 16 – Valid Anagram
 
-Given two binary strings s1 and s2 consisting of only 0s and 1s. 
+### Problem Statement
 
-Find the resultant string after adding the two Binary Strings.
+Given two strings `s` and `t`, determine whether `t` is an anagram of `s`.
 
-Note: The input strings may contain leading zeros but the output string should not have any leading zeros.
+An **anagram** is a word formed by rearranging the letters of another word, using all the original letters exactly once.
 
-Input: s1 = "1101", s2 = "111"
+---
 
-Output: 10100
+### 🔍 Example
 
-Explanation:
+**Input:**
 
- 1101
- 
-(+)
-   111
-   
-10100
-  
-Input: s1 = "00100", s2 = "010"
+```
+s = "anagram"
+t = "nagaram"
+```
 
-Output: 110
+**Output:**
 
-Explanation: 
+```
+True
+```
 
-  100
-  
-(+)
-10
+**Input:**
 
-  110
+```
+s = "rat"
+t = "car"
+```
+
+**Output:**
+
+```
+False
+```
+
+---
+
+### 💡 Approach
+
+1. **Early Length Check:** If the strings differ in length, they cannot be anagrams.
+2. **Character Frequency:** Count the occurrences of each character in both strings using dictionaries.
+3. **Comparison:** If both frequency maps are identical, the strings are anagrams.
+
+---
+
+### 🧠 Complexity Analysis
+
+* **Time Complexity:** `O(n)` – linear scan through both strings.
+* **Space Complexity:** `O(1)` – constant extra space (assuming fixed alphabet).
+
+---
+
+### 🧐 Takeaway
+
+This problem emphasizes how **hashmaps simplify comparison tasks**. Instead of relying on sorting or brute-force, understanding data structures allows for cleaner, faster solutions.
+
+Even simple problems like this build the foundation for designing efficient data pipelines and model preprocessing logic.
+
+
